@@ -15,6 +15,7 @@ resource "azurerm_storage_account" "example" {
   location                 = azurerm_resource_group.rg-demo.location
   account_tier             = var.storage_account_tier
   account_replication_type = var.account_replication_type
+  allow_blob_public_access = true
 
   tags = {
     environment = var.environment
